@@ -1,0 +1,5 @@
+D:\Test Solutions\vksis\lab01\lab01\bin\Debug\lab01.exe
+D:\Test Solutions\vksis\lab01\lab01\bin\Debug\lab01.pdb
+D:\Test Solutions\vksis\lab01\lab01\obj\Debug\lab01.csprojResolveAssemblyReference.cache
+D:\Test Solutions\vksis\lab01\lab01\obj\Debug\lab01.exe
+D:\Test Solutions\vksis\lab01\lab01\obj\Debug\lab01.pdb
