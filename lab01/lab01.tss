@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>D:\Test Solutions\vksis\lab01\lab01\HostParams.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>D:\Test Solutions\vksis\lab01\lab01\Host.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>D:\Test Solutions\vksis\lab01\lab01\Service.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>D:\Test Solutions\vksis\lab01\lab01\Program.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>D:\Test Solutions\vksis\lab01\lab01\Package.cs</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

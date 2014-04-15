@@ -4,20 +4,19 @@
 
     public class Package
     {
-        public Package(int sourceAddress, int destinationAddress, String data)
+        public Package(byte sourceAddress, byte destinationAddress, String data)
         {
             SourceAddress = sourceAddress;
             DestinationAddress = destinationAddress;
             Data = data;
-            CollisionNumber = 0;
         }
 
         public String Data { get; private set; }
 
-        public int CollisionNumber { get;  set; }
+        public byte DestinationAddress { get; private set; }
 
-        public int DestinationAddress { get; private set; }
+        public byte SourceAddress { get; set; }
 
-        public int SourceAddress { get; private set; }
+        public bool IsCollision { get; set; }
     }
 }

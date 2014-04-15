@@ -3,19 +3,79 @@
     using System;
     using System.Threading;
 
-    public static class Host
+    public class Host
     {
-        public static void Enable(Object data)
+        private readonly HostParams hostParams;
+
+        private int timeToWait;
+
+        public Package Buffer { get; set; }
+
+        public int CollisionCount { get; private set; }
+
+        public Host(HostParams hostParams)
         {
-            var information = (HostParams) data;
+            this.hostParams = hostParams;
+            timeToWait = Service.Random.Next(0, 3000);
+        }
 
-            while (true)
+        public void Send(Object data)
+        {
+            var package = data as Package;
+
+            if (package != null)
             {
-                var package = new Package(information.SourceAddress, information.DestinationAddress, information.Data);
+                Thread.Sleep(timeToWait);
 
-                Thread.Sleep(Service.Random.Next(0, 1000));
+                lock (Service.PacketQueue)
+                {
+                    Service.PacketQueue.Add(package);    
+                }
+            }
+        }
 
-                Service.PacketQueue.Add(package);
+        public void Receive(Object data)
+        {
+            var package = data as Package;
+
+            if (package != null)
+            {
+
+                if (package.DestinationAddress == hostParams.SourceAddress)
+                {
+                    Console.WriteLine("Host " + hostParams.SourceAddress + ": " + package.Data);
+                    timeToWait = Service.Random.Next(0, 3000);
+                    CollisionCount = 0;
+                    Send(Buffer);
+
+                }
+                else if (package.IsCollision)
+                {
+                    CollisionCount++;
+
+                    if (CollisionCount == 10)
+                    {
+                        Console.WriteLine("Host " + hostParams.SourceAddress + ": dropped package" + package.Data + "collision count = " +
+                                      CollisionCount);
+                        timeToWait = Service.Random.Next(0, 3000);
+                        CollisionCount = 0;
+                        Send(Buffer);
+
+                    }
+                    else
+                    {
+                        Console.Write("Host " + hostParams.SourceAddress + ": " + package.Data + "Collision count = " +
+                            CollisionCount);
+
+                        double min = Math.Min(CollisionCount, 10);
+
+                        timeToWait = Service.Random.Next(0, (int)Math.Pow(2, min)) * 1000;
+                        Console.WriteLine(" Time to wait = " + (timeToWait / 1000));
+
+                        Send(Buffer);
+    
+                    }                    
+                }
             }
         }
     }

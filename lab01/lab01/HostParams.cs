@@ -4,15 +4,12 @@
 
     public class HostParams
     {
-        public HostParams(int sourceAddress)
+        public HostParams(byte sourceAddress)
         {
             SourceAddress = sourceAddress;
         }
 
-        public int SourceAddress { get; private set; }
-
-        public String Data { get; set; }
-
-        public int DestinationAddress { get; set; }
+        public byte SourceAddress { get; private set; }
+        
     }
 }
