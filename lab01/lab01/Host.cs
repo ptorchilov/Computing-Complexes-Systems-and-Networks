@@ -3,22 +3,65 @@
     using System;
     using System.Threading;
 
+    /// <summary>
+    /// Class represented host station.
+    /// </summary>
     public class Host
     {
+        #region Private Fields
+
+        /// <summary>
+        /// The host parameters
+        /// </summary>
         private readonly HostParams hostParams;
 
-        private int timeToWait;
+        /// <summary>
+        /// The time automatic wait
+        /// </summary>
+        private int timeToWait; 
 
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// Gets or sets the buffer.
+        /// </summary>
+        /// <value>
+        /// The buffer.
+        /// </value>
         public Package Buffer { get; set; }
 
-        public int CollisionCount { get; private set; }
+        /// <summary>
+        /// Gets the collision count.
+        /// </summary>
+        /// <value>
+        /// The collision count.
+        /// </value>
+        public int CollisionCount { get; private set; } 
 
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Host"/> class.
+        /// </summary>
+        /// <param name="hostParams">The host parameters.</param>
         public Host(HostParams hostParams)
         {
             this.hostParams = hostParams;
             timeToWait = Service.Random.Next(0, 3019);
-        }
+        } 
 
+        #endregion
+
+        #region Public Methods
+
+        /// <summary>
+        /// Sends the specified data.
+        /// </summary>
+        /// <param name="data">The data.</param>
         public void Send(Object data)
         {
             var package = data as Package;
@@ -37,6 +80,10 @@
             }
         }
 
+        /// <summary>
+        /// Receives the specified data.
+        /// </summary>
+        /// <param name="data">The data.</param>
         public void Receive(Object data)
         {
             var package = data as Package;
@@ -79,5 +126,7 @@
                 }
             }
         }
+
+        #endregion
     }
 }
