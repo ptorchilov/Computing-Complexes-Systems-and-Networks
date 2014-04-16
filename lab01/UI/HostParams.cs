@@ -1,4 +1,4 @@
-﻿namespace lab01
+﻿namespace UI
 {
     /// <summary>
     /// Class represented host address.
@@ -13,7 +13,7 @@
         /// <param name="sourceAddress">The source address.</param>
         public HostParams(byte sourceAddress)
         {
-            SourceAddress = sourceAddress;
+            this.SourceAddress = sourceAddress;
         } 
 
         #endregion

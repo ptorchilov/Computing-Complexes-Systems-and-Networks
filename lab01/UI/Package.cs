@@ -1,4 +1,4 @@
-﻿namespace lab01
+﻿namespace UI
 {
     using System;
 
@@ -17,9 +17,9 @@
         /// <param name="data">The data.</param>
         public Package(byte sourceAddress, byte destinationAddress, String data)
         {
-            SourceAddress = sourceAddress;
-            DestinationAddress = destinationAddress;
-            Data = data;
+            this.SourceAddress = sourceAddress;
+            this.DestinationAddress = destinationAddress;
+            this.Data = data;
         } 
 
         #endregion

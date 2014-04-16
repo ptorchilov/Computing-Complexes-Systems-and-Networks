@@ -1,9 +1,9 @@
-﻿namespace lab01
+﻿namespace UI
 {
     using System;
+    using System.Collections.Generic;
     using System.Text;
     using System.Threading;
-    using System.Collections.Generic;
 
     public class Service
     {
@@ -23,6 +23,8 @@
         /// The host collection
         /// </summary>
         public static List<Host> HostCollection = new List<Host>(); 
+
+        public static List<Thread> Threads = new List<Thread>(); 
 
         #endregion
 
@@ -54,8 +56,9 @@
 
                         foreach (var host in HostCollection)
                         {
-                            var worker = new Thread(host.Receive) { IsBackground = true };
+                            var worker = new Thread(host.Receive) { IsBackground = true};
 
+                            Threads.Add(worker);
                             worker.Start(collisionPackage);
                         }
 

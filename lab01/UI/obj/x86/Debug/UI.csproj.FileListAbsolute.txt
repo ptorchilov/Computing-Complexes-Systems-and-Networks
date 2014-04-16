@@ -4,3 +4,4 @@ D:\work\VS\sem8\vksis\Computing-Complexes-Systems-and-Networks\lab01\UI\obj\x86\
 D:\work\VS\sem8\vksis\Computing-Complexes-Systems-and-Networks\lab01\UI\obj\x86\Debug\UI.csproj.GenerateResource.Cache
 D:\work\VS\sem8\vksis\Computing-Complexes-Systems-and-Networks\lab01\UI\obj\x86\Debug\UI.exe
 D:\work\VS\sem8\vksis\Computing-Complexes-Systems-and-Networks\lab01\UI\obj\x86\Debug\UI.pdb
+D:\work\VS\sem8\vksis\Computing-Complexes-Systems-and-Networks\lab01\UI\obj\x86\Debug\UI.ApplicationForm.resources

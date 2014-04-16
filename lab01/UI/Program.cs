@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace UI
+﻿namespace UI
 {
+    using System;
+    using System.Windows.Forms;
+
+    /// <summary>
+    /// Run application.
+    /// </summary>
     static class Program
     {
         /// <summary>
@@ -15,7 +16,7 @@ namespace UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ApplicationForm());
         }
     }
 }
