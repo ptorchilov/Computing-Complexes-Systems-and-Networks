@@ -3,3 +3,8 @@ D:\Test Solutions\vksis\lab01\lab01\bin\Debug\lab01.pdb
 D:\Test Solutions\vksis\lab01\lab01\obj\Debug\lab01.exe
 D:\Test Solutions\vksis\lab01\lab01\obj\Debug\lab01.pdb
 D:\Test Solutions\vksis\lab01\lab01\obj\Debug\lab01.csprojResolveAssemblyReference.cache
+D:\work\VS\sem8\vksis\Computing-Complexes-Systems-and-Networks\lab01\lab01\obj\Debug\lab01.exe
+D:\work\VS\sem8\vksis\Computing-Complexes-Systems-and-Networks\lab01\lab01\obj\Debug\lab01.pdb
+D:\work\VS\sem8\vksis\Computing-Complexes-Systems-and-Networks\lab01\lab01\bin\Debug\lab01.exe
+D:\work\VS\sem8\vksis\Computing-Complexes-Systems-and-Networks\lab01\lab01\bin\Debug\lab01.pdb
+D:\work\VS\sem8\vksis\Computing-Complexes-Systems-and-Networks\lab01\lab01\obj\Debug\lab01.csprojResolveAssemblyReference.cache

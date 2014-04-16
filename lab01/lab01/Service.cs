@@ -17,7 +17,7 @@
         {
             while (true)
             {
-                Thread.Sleep(100);
+                Thread.Sleep(113);
 
                 var localQueue = new List<Package>();
 
@@ -52,10 +52,6 @@
                         localQueue.Clear();
                     }
                 }
-//                else
-//                {
-//                    Console.WriteLine("Media is clear");
-//                }
             }
         }
 

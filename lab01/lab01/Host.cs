@@ -16,7 +16,7 @@
         public Host(HostParams hostParams)
         {
             this.hostParams = hostParams;
-            timeToWait = Service.Random.Next(0, 3000);
+            timeToWait = Service.Random.Next(0, 3019);
         }
 
         public void Send(Object data)
@@ -27,9 +27,12 @@
             {
                 Thread.Sleep(timeToWait);
 
-                lock (Service.PacketQueue)
+                if (!Service.PacketQueue.Exists(p => p.SourceAddress == hostParams.SourceAddress))
                 {
-                    Service.PacketQueue.Add(package);    
+                    lock (Service.PacketQueue)
+                    {
+                        Service.PacketQueue.Add(package);
+                    }
                 }
             }
         }
@@ -40,14 +43,12 @@
 
             if (package != null)
             {
-
                 if (package.DestinationAddress == hostParams.SourceAddress)
                 {
                     Console.WriteLine("Host " + hostParams.SourceAddress + ": " + package.Data);
-                    timeToWait = Service.Random.Next(0, 3000);
+                    timeToWait = Service.Random.Next(0, 3019);
                     CollisionCount = 0;
                     Send(Buffer);
-
                 }
                 else if (package.IsCollision)
                 {
@@ -55,17 +56,18 @@
 
                     if (CollisionCount == 10)
                     {
-                        Console.WriteLine("Host " + hostParams.SourceAddress + ": dropped package" + package.Data + "collision count = " +
-                                      CollisionCount);
-                        timeToWait = Service.Random.Next(0, 3000);
+                        Console.WriteLine(
+                            "Host " + hostParams.SourceAddress + ": dropped package" + package.Data
+                            + "collision count = " + CollisionCount);
+                        timeToWait = Service.Random.Next(0, 3019);
                         CollisionCount = 0;
                         Send(Buffer);
-
                     }
                     else
                     {
-                        Console.Write("Host " + hostParams.SourceAddress + ": " + package.Data + "Collision count = " +
-                            CollisionCount);
+                        Console.Write(
+                            "Host " + hostParams.SourceAddress + ": " + package.Data + "Collision count = "
+                            + CollisionCount);
 
                         double min = Math.Min(CollisionCount, 10);
 
@@ -73,8 +75,7 @@
                         Console.WriteLine(" Time to wait = " + (timeToWait / 1000));
 
                         Send(Buffer);
-    
-                    }                    
+                    }
                 }
             }
         }
