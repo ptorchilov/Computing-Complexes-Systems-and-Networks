@@ -54,26 +54,26 @@
             this.groupBox1.Controls.Add(this.textBoxHost1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(599, 100);
+            this.groupBox1.Size = new System.Drawing.Size(899, 117);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hosts";
             // 
             // textBoxHost3
             // 
-            this.textBoxHost3.Location = new System.Drawing.Point(418, 19);
+            this.textBoxHost3.Location = new System.Drawing.Point(623, 19);
             this.textBoxHost3.Multiline = true;
             this.textBoxHost3.Name = "textBoxHost3";
-            this.textBoxHost3.Size = new System.Drawing.Size(175, 74);
+            this.textBoxHost3.Size = new System.Drawing.Size(270, 87);
             this.textBoxHost3.TabIndex = 2;
             this.textBoxHost3.Text = "3333333333";
             // 
             // textBoxHost2
             // 
-            this.textBoxHost2.Location = new System.Drawing.Point(211, 20);
+            this.textBoxHost2.Location = new System.Drawing.Point(295, 19);
             this.textBoxHost2.Multiline = true;
             this.textBoxHost2.Name = "textBoxHost2";
-            this.textBoxHost2.Size = new System.Drawing.Size(175, 74);
+            this.textBoxHost2.Size = new System.Drawing.Size(265, 87);
             this.textBoxHost2.TabIndex = 1;
             this.textBoxHost2.Text = "2222222222";
             // 
@@ -82,16 +82,16 @@
             this.textBoxHost1.Location = new System.Drawing.Point(7, 20);
             this.textBoxHost1.Multiline = true;
             this.textBoxHost1.Name = "textBoxHost1";
-            this.textBoxHost1.Size = new System.Drawing.Size(175, 74);
+            this.textBoxHost1.Size = new System.Drawing.Size(221, 86);
             this.textBoxHost1.TabIndex = 0;
             this.textBoxHost1.Text = "1111111111";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBoxStatistics);
-            this.groupBox2.Location = new System.Drawing.Point(13, 119);
+            this.groupBox2.Location = new System.Drawing.Point(13, 136);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(599, 130);
+            this.groupBox2.Size = new System.Drawing.Size(899, 261);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Statistics";
@@ -102,15 +102,15 @@
             this.textBoxStatistics.Multiline = true;
             this.textBoxStatistics.Name = "textBoxStatistics";
             this.textBoxStatistics.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxStatistics.Size = new System.Drawing.Size(586, 104);
+            this.textBoxStatistics.Size = new System.Drawing.Size(877, 235);
             this.textBoxStatistics.TabIndex = 0;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBoxOutput);
-            this.groupBox3.Location = new System.Drawing.Point(13, 255);
+            this.groupBox3.Location = new System.Drawing.Point(13, 403);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(599, 130);
+            this.groupBox3.Size = new System.Drawing.Size(899, 181);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Output";
@@ -121,12 +121,12 @@
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxOutput.Size = new System.Drawing.Size(586, 104);
+            this.textBoxOutput.Size = new System.Drawing.Size(877, 156);
             this.textBoxOutput.TabIndex = 1;
             // 
             // buttonStop
             // 
-            this.buttonStop.Location = new System.Drawing.Point(176, 401);
+            this.buttonStop.Location = new System.Drawing.Point(233, 601);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(82, 29);
             this.buttonStop.TabIndex = 3;
@@ -136,7 +136,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(375, 401);
+            this.buttonStart.Location = new System.Drawing.Point(564, 601);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(87, 29);
             this.buttonStart.TabIndex = 4;
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 442);
+            this.ClientSize = new System.Drawing.Size(924, 642);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.groupBox3);

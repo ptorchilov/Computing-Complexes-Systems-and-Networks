@@ -107,6 +107,7 @@
                 {
                     addresses.Append(packet.SourceAddress).Append(" ");
                 }
+                addresses.Length--;
             }
 
             return addresses.ToString();
